@@ -1,12 +1,6 @@
 package com.example.movieplayer.domain
 
-data class FilmResponse(
-    val dates: Dates,
-    val page: Int,
-    val results: List<Result>
-)
-
-data class Result(
+class Film (
     val adult: Boolean,
     val backdrop_path: String,
     val genre_ids: List<Int>,
@@ -21,8 +15,4 @@ data class Result(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int
-)
-data class Dates(
-    val maximum: String,
-    val minimum: String
 )

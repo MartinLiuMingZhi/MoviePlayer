@@ -3,6 +3,7 @@
     <style name="Base.Theme.MoviePlayer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">#19191b</item>
     </style>
 
     <style name="Theme.MoviePlayer" parent="Base.Theme.MoviePlayer" />

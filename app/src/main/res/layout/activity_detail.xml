@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".activity.DetailActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/main_background"
@@ -32,7 +32,7 @@
                     android:id="@+id/posterBigImg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:alpha="0.1"
+                    android:alpha="0.3"
                     android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +45,7 @@
                     android:id="@+id/posterNormalImg"
                     android:layout_width="210dp"
                     android:layout_height="300dp"
+                    android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +63,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/backImg"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/bg_circle_dark"
@@ -203,17 +204,17 @@
                 app:layout_constraintStart_toStartOf="@id/movieSummeryInfo"
                 app:layout_constraintEnd_toEndOf="@id/movieSummeryInfo" />
 
-            <TextView
-                android:id="@+id/movieActorInfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="test"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@id/textView13"
-                app:layout_constraintStart_toStartOf="@id/textView13"
-                app:layout_constraintTop_toBottomOf="@id/textView13"/>
+<!--            <TextView-->
+<!--                android:id="@+id/movieActorInfo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="test"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                app:layout_constraintEnd_toEndOf="@id/textView13"-->
+<!--                app:layout_constraintStart_toStartOf="@id/textView13"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/textView13"/>-->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/imagesRecyclerView"
@@ -222,9 +223,9 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/movieActorInfo"/>
+                app:layout_constraintTop_toBottomOf="@id/textView13"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <ProgressBar
         android:id="@+id/progressBar"

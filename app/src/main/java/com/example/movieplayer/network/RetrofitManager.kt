@@ -18,6 +18,7 @@ object RetrofitManager {
 
     private fun createOkHttpClient() : OkHttpClient {
         val okBuilder = OkHttpClient.Builder().apply {
+            addInterceptor(NetworkInterceptor)
             addInterceptor {
                 val original = it.request()
                 val request = original.newBuilder()
@@ -29,8 +30,8 @@ object RetrofitManager {
                 it.proceed(request)
             }
         }
-            .connectTimeout(60, TimeUnit.SECONDS) // 设置连接超时时间为 30 秒
-            . readTimeout(60, TimeUnit.SECONDS) // 设置读取超时时间为 30 秒
+            .connectTimeout(30, TimeUnit.SECONDS) // 设置连接超时时间为 30 秒
+            . readTimeout(30, TimeUnit.SECONDS) // 设置读取超时时间为 30 秒
         return  okBuilder.build()
     }
 

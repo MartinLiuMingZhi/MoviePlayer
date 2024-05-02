@@ -5,8 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:background="@color/main_background"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -56,7 +58,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Movies"
+                android:text="Now Playing Movies"
                 android:textColor="#ffc187"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="12dp"
@@ -75,7 +77,11 @@
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
                     android:minHeight="200dp"
-                    android:paddingStart="12dp" />
+                    android:paddingStart="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
                     android:id="@+id/loading1"
@@ -114,7 +120,13 @@
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
                     android:minHeight="200dp"
-                    android:paddingStart="12dp" />
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="110dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ProgressBar
                     android:id="@+id/loading2"
